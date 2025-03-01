@@ -1,0 +1,115 @@
+.contacts__title {
+    margin-top: 100px;
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: 39px;
+    margin-bottom: 40px;
+}
+
+.contacts__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 30px;
+    height: 30px;
+}
+
+.info__row p{
+    font-size: 16px;
+}
+
+.image__block {
+    display: flex;
+}
+
+.image__block div {
+    margin-right: 15px;
+}
+
+.block__title {
+    font-size: 26px;
+    font-weight: 400;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.text__block{
+    padding-right: 110px;
+}
+
+.info__row {
+    display: flex;
+    align-items: center;
+}
+
+.info__row p a {
+    color: #000;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #D4AF37;
+    margin-right: 7px;
+}
+
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    width: 740px;
+    margin: 0 auto;
+}
+
+.form-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 34px;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 380px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.input-field::placeholder {
+    color: #bbb;
+}
+
+.submit-button {
+    width: 320px;
+    padding: 12px;
+    background-color: #d4a017;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #b5830a;
+}
+
+.back__form {
+    margin-top: 20px;
+}
+
+.slick-slider .slick-slide {
+    padding: 0 60px;
+}

@@ -1,0 +1,29 @@
+.about-us__title{
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: 39px;
+    margin-bottom: 40px;
+}
+
+.about-us__image{
+    background: url('../images/test.png');
+    width: 514px;
+    height: 613px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-us__info{
+    display: flex;
+    justify-content: center;
+}
+
+.about-us__text{
+    font-size: 25px;
+    width: 650px;
+    padding-left: 19px;
+}
+
+.about-us__text p {
+    padding-top: 90px;
+}
