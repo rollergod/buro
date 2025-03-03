@@ -49,16 +49,7 @@
     width: 265px;
 }
 
-.circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid #D4AF37;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #D4AF37;
-}
+
 
 .content img {
     margin: 0 25px;

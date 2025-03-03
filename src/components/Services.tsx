@@ -1,5 +1,5 @@
 import React from 'react'
-import './Services.css'
+import '../styles/Services.css'
 
 export const Services = () => {
     return (
@@ -33,7 +33,7 @@ export const Services = () => {
                             <h5>Транспортировка</h5>
                         </div>
                     </div>
-                    <a href="#" className="link-button">Нажми меня</a>
+                    <a href="#" className="link-button">Подробнее</a>
                 </div>
             </div>
         </>

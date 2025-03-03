@@ -1,5 +1,5 @@
 import React from 'react'
-import './Packets.css'
+import '../styles/Packets.css'
 
 export const Packets = () => {
     return (

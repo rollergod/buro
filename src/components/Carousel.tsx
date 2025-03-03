@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import './Contacts.css';
+import '../styles/Contacts.css';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,10 +19,9 @@ function SamplePrevArrow(props) {
                  borderRadius: '50%',
                  border: '2px solid #000',
                  position: 'absolute',
-                 top: '20%',
+                 top: '40%',
                  left: '30%',
                  zIndex: '1', cursor: 'pointer'
-                 // #D4AF37
              }}>
             <img src={require('../images/left.png')} alt='#'/>
         </div>
@@ -43,7 +42,7 @@ function SampleNextArrow(props) {
                  borderRadius: '50%',
                  border: '2px solid #000',
                  position: 'absolute',
-                 top: '20%', right: '29%', cursor: 'pointer'
+                 top: '40%', right: '29%', cursor: 'pointer'
              }}>
             <img src={require('../images/right.png')} alt='#'/>
         </div>

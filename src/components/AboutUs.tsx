@@ -1,5 +1,5 @@
 import React from "react";
-import './AboutUs.css';
+import '../styles/AboutUs.css';
 
 export const AboutUs = () => {
     return (
@@ -24,7 +24,7 @@ export const AboutUs = () => {
                                 сложностями по всей территории Краснодарского края
                             </p>
                         </div>
-                        <a href="#" className="link-button">Нажми меня</a>
+                        <a href="#" className="link-button">Подробнее</a>
                     </div>
                 </div>
             </div>

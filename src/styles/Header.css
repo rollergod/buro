@@ -57,18 +57,8 @@
     margin-top: 25px;
 }
 
-.link-button {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 14px 80px;
-    background-color: #fff;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
+.white {
+    background-color: #fff !important;
+    color: black !important;
 }
 
-/*.link-button:hover {*/
-/*    background-color: #0056b3;*/
-/*}*/

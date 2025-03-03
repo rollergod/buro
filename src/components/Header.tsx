@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css'
+import '../styles/Header.css'
 
 export const Header = () => {
     return (
@@ -8,11 +8,11 @@ export const Header = () => {
                 <div className="container">
                     <nav className="header__nav">
                         <ul className="header__list">
-                            <li className="header__list-item"><a href='#'>Главная</a></li>
-                            <li className="header__list-item"><a href='#'>Услуги</a></li>
-                            <li className="header__list-item"><a href='#'>Пакеты</a></li>
-                            <li className="header__list-item"><a href='#'>Контакты</a></li>
-                            <li className="header__list-item"><a href='#'>О нас</a></li>
+                            <li className="header__list-item"><a className='link' href='#'>Главная</a></li>
+                            <li className="header__list-item"><a className='link' href='#'>Услуги</a></li>
+                            <li className="header__list-item"><a className='link' href='#'>Пакеты</a></li>
+                            <li className="header__list-item"><a className='link' href='#'>Контакты</a></li>
+                            <li className="header__list-item"><a className='link' href='#'>О нас</a></li>
                         </ul>
                     </nav>
                     <div className='header__phone'>
@@ -31,7 +31,7 @@ export const Header = () => {
                     <div className="welcome">
                         <h1 className="welcome__header">Помогаем достойно проводить близких в последний путь</h1>
                         <h3 className="welcome__text">Мы ценим жизнь, ценим людей, которые были с нами.</h3>
-                        <a href="#" className="link-button">Нажми меня</a>
+                        <a href="#" className="link-button white">Консультация</a>
                     </div>
                 </div>
             </main>

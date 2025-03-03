@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './Accordion.css';
+import '../styles/Accordion.css';
 
 export const Accordion: React.FC<{ content: string, title: string }[]> = ({items}) => {
     const [openIndexes, setOpenedIndex] = useState([]);
@@ -39,9 +39,11 @@ export const Accordion: React.FC<{ content: string, title: string }[]> = ({items
                                     height: "25px",
                                     border: "1px solid black",
                                     borderRadius: "50%",
+                                    transition: 'border-color 0.2s ease-in-out',
+                                    borderColor: openIndexes.includes(index) ? '#D4AF37' : 'black'
                                 }}>
                                     <img
-                                        src={require('../images/AccordionArrow.png')}
+                                        src={require(openIndexes.includes(index) ? '../images/coloredArrow.png' : '../images/AccordionArrow.png' )}
                                         alt='#'
                                         style={{
                                             transform: openIndexes.includes(index) ? "rotate(180deg)" : "rotate(0deg)",
@@ -53,7 +55,8 @@ export const Accordion: React.FC<{ content: string, title: string }[]> = ({items
                             <div style={{borderBottom: "1px solid black", width: "100%"}}></div>
                             <div style={{
                                 padding: openIndexes.includes(index) ? "10px 15px" : "0px 15px",
-                                maxHeight: openIndexes.includes(index) ? "300px" : "0px"
+                                maxHeight: openIndexes.includes(index) ? "300px" : "0px",
+
                             }} className='accordion__item--content'>
                                 {openIndexes.includes(index) && <div>{item.content}</div>}
                             </div>

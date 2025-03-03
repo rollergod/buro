@@ -44,6 +44,7 @@
 .info__row {
     display: flex;
     align-items: center;
+    margin-bottom: 3px;
 }
 
 .info__row p a {
@@ -92,7 +93,7 @@
 .submit-button {
     width: 320px;
     padding: 12px;
-    background-color: #d4a017;
+    background-color: #D4AF37;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -112,4 +113,12 @@
 
 .slick-slider .slick-slide {
     padding: 0 60px;
+}
+
+.image__block .circle{
+    cursor: pointer;
+}
+
+.image__block .circle:hover{
+    border-color: black;
 }

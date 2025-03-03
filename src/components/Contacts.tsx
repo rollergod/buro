@@ -1,5 +1,5 @@
-import './Packets.css'
-import './Contacts.css'
+import '../styles/Packets.css'
+import '../styles/Contacts.css'
 
 export const Contacts = () => {
     return (
@@ -27,9 +27,9 @@ export const Contacts = () => {
                     </div>
                     <div className='image__block'>
                         <div className='circle'><img src={require('../images/app.png')} alt='#'/></div>
-                        <div className='circle'><img src={require('../images/app.png')} alt='#'/></div>
-                        <div className='circle'><img src={require('../images/app.png')} alt='#'/></div>
-                        <div className='circle'><img src={require('../images/app.png')} alt='#'/></div>
+                        <div className='circle'><img src={require('../images/telephone.png')} alt='#'/></div>
+                        <div className='circle'><img src={require('../images/social.png')} alt='#'/></div>
+                        <div className='circle'><img src={require('../images/video.png')} alt='#'/></div>
                     </div>
                 </div>
                 <div className='back__form'>

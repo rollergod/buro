@@ -12,7 +12,9 @@ export const Home = () => {
 
     const items = [
         {content: 'lorem10lorem10lorem10 lorem10lorem10lorem10 lorem10lorem10', title: 'Первый вопрос'},
-        {content: 'lorem10lorem10lorem10 lorem10lorem10lorem10 lorem10lorem10', title: 'Второй вопрос'}
+        {content: 'lorem10lorem10lorem10 lorem10lorem10lorem10 lorem10lorem10', title: 'Второй вопрос'},
+        {content: 'lorem10lorem10lorem10 lorem10lorem10lorem10 lorem10lorem10', title: 'Третий вопрос'}
+        , {content: 'lorem10lorem10lorem10 lorem10lorem10lorem10 lorem10lorem10', title: 'Четвертый вопрос'}
     ]
 
     return (

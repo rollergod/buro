@@ -1,4 +1,4 @@
-import './Footer.css';
+import '../styles/Footer.css';
 
 export const Footer = () => {
     return (
@@ -7,12 +7,12 @@ export const Footer = () => {
                 <div className='footer__section'>
                     <div className='footer__menu'>
                         <ul>
-                            <li><a href='#'>Главная</a></li>
-                            <li><a href='#'>Услуги</a></li>
-                            <li><a href='#'>Пакеты</a></li>
-                            <li><a href='#'>Отзывы</a></li>
-                            <li><a href='#'>Контакты</a></li>
-                            <li><a href='#'>О нас</a></li>
+                            <li><a className='link' href='#'>Главная</a></li>
+                            <li><a className='link' href='#'>Услуги</a></li>
+                            <li><a className='link' href='#'>Пакеты</a></li>
+                            <li><a className='link' href='#'>Отзывы</a></li>
+                            <li><a className='link' href='#'>Контакты</a></li>
+                            <li><a className='link' href='#'>О нас</a></li>
                         </ul>
                     </div>
                     <div>
