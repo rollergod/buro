@@ -6,7 +6,7 @@ export const Services = () => {
         <>
             <div className="services">
                 <div className='container'>
-                    <h2 className='services__title'>Услуги</h2>
+                    <h2 className='services__title title'>Услуги</h2>
                     <div className='services__block'>
                         <div className='service'>
                             <img src={require('../images/hearse.png')} alt="#"/>

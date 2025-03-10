@@ -1,11 +1,12 @@
 import '../styles/Packets.css'
 import '../styles/Contacts.css'
+import React from 'react';
 
-export const Contacts = () => {
+export const Contacts:React.FC<{isPage: boolean}> = ({isPage}) => {
     return (
         <div className='contacts'>
             <div className='container'>
-                <h2 className='contacts__title'>Контакты</h2>
+                <h2 className='title'>Контакты</h2>
                 <div className='contacts__block'>
                     <div className='text__block'>
                         <h5 className='block__title'>Свяжитесь с нами любым удобным для вас способом:</h5>
@@ -52,6 +53,8 @@ export const Contacts = () => {
                         Отправить
                     </button>
                 </div>
+
+                {isPage && <img style={{marginTop: '100px'}} src={require('../images/fullMap.png')} alt='#'/>}
             </div>
         </div>
     )

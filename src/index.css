@@ -1,80 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;700&display=swap');
 
-h1,h2,h3,h4,h5,p{
-  margin: 0;
-  padding: 0;
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Cousine", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*background-color: #000;*/
-  background-color: #F3F3F3;
+    margin: 0;
+    font-family: "Cousine", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*background-color: #000;*/
+    background-color: #F3F3F3;
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
-ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-  max-width: 1180px;
-  margin: 0 auto;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 .link {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: #fff;
-  transition: width 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
 }
 
 .link:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .link-button {
-  display: inline-block;
-  margin-top: 35px;
-  padding: 14px 80px;
-  background-color: #D4AF37;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  font-size: 20px;
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 80px;
+    background-color: #D4AF37;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
 }
 
 .link-button:hover {
-  background-color: #b5830a;
+    background-color: #b5830a;
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid #D4AF37;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #D4AF37;
-  transition: border-color 0.3s ease-in-out;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D4AF37;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.title {
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: 39px;
+    margin-bottom: 40px;
+}
+
+.submit-button {
+    width: 320px;
+    padding: 12px;
+    background-color: #D4AF37;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.circle img {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+.image__block .circle:hover{
+    border-color: black;
+}
+
+.input-field {
+    width: 380px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.input-field::placeholder {
+    color: #bbb;
 }

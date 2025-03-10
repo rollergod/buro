@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Header.css'
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     return (
@@ -8,11 +9,11 @@ export const Header = () => {
                 <div className="container">
                     <nav className="header__nav">
                         <ul className="header__list">
-                            <li className="header__list-item"><a className='link' href='#'>Главная</a></li>
-                            <li className="header__list-item"><a className='link' href='#'>Услуги</a></li>
-                            <li className="header__list-item"><a className='link' href='#'>Пакеты</a></li>
-                            <li className="header__list-item"><a className='link' href='#'>Контакты</a></li>
-                            <li className="header__list-item"><a className='link' href='#'>О нас</a></li>
+                            <li className="header__list-item"><Link to='/' className='link'>Главная</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/services'>Услуги</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/services'>Пакеты</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/contacts'>Контакты</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/contacts'>О нас</Link></li>
                         </ul>
                     </nav>
                     <div className='header__phone'>

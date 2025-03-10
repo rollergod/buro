@@ -1,0 +1,48 @@
+.item__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item__block-title {
+    text-align: start;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.item__block-title:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.item {
+    width: 380px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: start;
+}
+
+.item__img {
+    border-radius: 10px 10px 0 0;
+}
+
+.item__title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.item__text {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.item__text p {
+    margin-bottom: 10px;
+}
+
+.item__text a {
+    color: black;
+    text-decoration: underline;
+    font-size: 15px;
+}

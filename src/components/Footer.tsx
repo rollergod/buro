@@ -16,7 +16,9 @@ export const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <img src={require('../images/map.png')} alt='#'/>
+                        <iframe style={{borderRadius:'10px'}}
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f9423f587a04ea12324063e4b917a7e6eb9c0f32c95be4663e413f377156a15&amp;source=constructor"
+                            width="380" height="200" frameBorder="0"></iframe>
                     </div>
                     <div className='footer__form'>
                         <input

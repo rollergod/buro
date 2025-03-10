@@ -11,7 +11,7 @@ export const Accordion: React.FC<{ content: string, title: string }[]> = ({items
     return (
         <div className='accordion__block'>
             <div className='container'>
-                <h2 className='accordion__title'>Частые вопросы</h2>
+                <h2 className='title'>Частые вопросы</h2>
                 <div style={{maxWidth: "600px", margin: "auto"}}>
                     {items.map((item, index) => (
                         <div key={index} style={{marginBottom: "10px"}}>

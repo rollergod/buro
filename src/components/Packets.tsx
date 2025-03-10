@@ -6,7 +6,7 @@ export const Packets = () => {
         <>
             <div className='packets'>
                 <div className='container'>
-                    <h2 className='packets__title'>Этапы</h2>
+                    <h2 className='packets__title title'>Этапы</h2>
                     <div className='container--outline'>
                         <div className="content">
                             <div className='top'>
