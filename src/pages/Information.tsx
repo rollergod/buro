@@ -32,7 +32,7 @@ export const Information = () => {
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 500,
-        variableWidth: false, // Убедимся, что все слайды одинаковые
+        variableWidth: false,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
     };
@@ -76,20 +76,20 @@ export const Information = () => {
                 </div>
 
                 <h2 style={{marginTop: '100px'}} className='title'>Наши ценности</h2>
-                <div className='items__block'>
-                    <div className='item'>
+                <div className='information__items'>
+                    <div className='information__item'>
                         <img src={require('../images/wreath.png')} alt='#'/>
                         <h4>Забота и уважение</h4>
                         <p>Мы относимся к каждой истории с искренним сочувствием и тактом, помогая семьям сохранять
                             светлую память о своих близких.</p>
                     </div>
-                    <div className='item'>
+                    <div className='information__item'>
                         <img src={require('../images/to-do-list (1).png')} alt='#'/>
                         <h4>Традиции и внимание к деталям</h4>
                         <p>Мы с уважением относимся к различным традициям, вероисповеданиям и личным пожеланиям,
                             создавая атмосферу уюта и умиротворения.</p>
                     </div>
-                    <div className='item'>
+                    <div className='information__item'>
                         <img src={require('../images/heart (1).png')} alt='#'/>
                         <h4>Поддержка и доверие</h4>
                         <p>Мы помогаем пережить трудный период, беря на себя заботу об организации и создавая

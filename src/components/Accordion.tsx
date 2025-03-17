@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import '../styles/Accordion.css';
+import {Popular} from "../pages/Home";
 
-export const Accordion: React.FC<{ content: string, title: string }[]> = ({items}) => {
+export const Accordion: React.FC<Popular[]> = ({items}) => {
     const [openIndexes, setOpenedIndex] = useState([]);
 
     const toggleItem = (index) => {

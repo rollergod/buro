@@ -11,7 +11,6 @@ body {
     font-family: "Cousine", serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /*background-color: #000;*/
     background-color: #F3F3F3;
 }
 
@@ -84,6 +83,7 @@ ul {
     color: #D4AF37;
     font-size: 39px;
     margin-bottom: 40px;
+    margin-top: 80px;
 }
 
 .submit-button {
@@ -102,10 +102,10 @@ ul {
 .circle img {
     width: 30px;
     height: 30px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.image__block .circle:hover{
+.image__block .circle:hover {
     border-color: black;
 }
 

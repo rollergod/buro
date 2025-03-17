@@ -10,31 +10,30 @@ import {Route, Routes} from "react-router-dom";
 
 function App() {
 
-
     return (
-        //
-        // <div className="App">
-        //     <Header/>
-        //     <Routes>
-        //         <Route path='/' element={<Home/>}/>
-        //         <Route path='/services' element={<ServicesPage/>}/>
-        //         <Route path='/contacts' element={<Contacts isPage={true}/>}/>
-        //         <Route path='/information' element={<Information/>}/>
-        //     </Routes>
-        //     {/*<ServicesPage />*/}
-        //     {/*<Information />*/}
-        //     {/*<Contacts isPage={true}/>*/}
-        //     <Footer/>
-        // </div>
 
         <div className="App">
             <Header/>
-            <ServicesPage />
-            {/*<Home/>*/}
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/services' element={<ServicesPage/>}/>
+                <Route path='/contacts' element={<Contacts isPage={true}/>}/>
+                <Route path='/information' element={<Information/>}/>
+            </Routes>
+            {/*<ServicesPage />*/}
             {/*<Information />*/}
             {/*<Contacts isPage={true}/>*/}
             <Footer/>
         </div>
+
+        // <div className="App">
+        //     <Header/>
+        //     <ServicesPage />
+        //     {/*<Home/>*/}
+        //     {/*<Information />*/}
+        //     {/*<Contacts isPage={true}/>*/}
+        //     <Footer/>
+        // </div>
     );
 }
 
