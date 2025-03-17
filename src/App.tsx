@@ -15,7 +15,7 @@ function App() {
         <div className="App">
             <Header/>
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route index path='/' element={<Home/>}/>
                 <Route path='/services' element={<ServicesPage/>}/>
                 <Route path='/contacts' element={<Contacts isPage={true}/>}/>
                 <Route path='/information' element={<Information/>}/>
