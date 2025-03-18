@@ -1,8 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/Header.css'
 import {Link} from "react-router-dom";
+import {Root} from "../types";
 
 export const Header = () => {
+
+    const [data, setData] = useState<Root>({
+        schedule: '',
+        number: ''
+    });
+
+    useEffect(() => {
+        fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
+            .then(res => res.json())
+            .then(items => {
+                setData(items);
+            });
+    },[])
+
     return (
         <>
             <header className="header">
@@ -13,16 +28,16 @@ export const Header = () => {
                             <li className="header__list-item"><Link className='link' to='/services'>Услуги</Link></li>
                             <li className="header__list-item"><Link className='link' to='/services'>Пакеты</Link></li>
                             <li className="header__list-item"><Link className='link' to='/contacts'>Контакты</Link></li>
-                            <li className="header__list-item"><Link className='link' to='/contacts'>О нас</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/information'>О нас</Link></li>
                         </ul>
                     </nav>
                     <div className='header__phone'>
-                        <a href='#'>+7(999)999-99-99</a>
+                        <a href='#'>{data.number}</a>
                     </div>
                     <div className='header__address'>
-                        <span>г. Москва</span>
+                        <span>г. Архангельск</span>
                         <br/>
-                        <span>Ходынский бульвар, 5.</span>
+                        <span>Гагарина, 5.</span>
                     </div>
                 </div>
             </header>

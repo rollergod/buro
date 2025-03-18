@@ -5,30 +5,15 @@ import {Packets} from "../components/Packets.tsx";
 import {Contacts} from "../components/Contacts.tsx";
 import {Carousel} from "../components/Carousel.tsx";
 import {Accordion} from "../components/Accordion.tsx";
-
-export interface Popular
-{
-    title: string;
-    content: string;
-}
-
-export interface Root
-{
-    services: Service[];
-    popular: Popular[];
-}
-
-export interface Service
-{
-    title: string;
-    imageUrl: string;
-}
+import {Root} from "../types";
 
 export const Home = () => {
 
     const [data, setData] = useState<Root>({
         services: [],
-        popular: []
+        popular: [],
+        schedule: '',
+        number: ''
     });
 
     useEffect(() => {
@@ -36,7 +21,6 @@ export const Home = () => {
            .then(res => res.json())
            .then(items => {
                setData(items);
-               console.log(items);
            });
    },[])
 
@@ -45,7 +29,7 @@ export const Home = () => {
             <AboutUs/>
             <Services services={data.services}/>
             <Packets/>
-            <Contacts/>
+            <Contacts schedule={data.schedule} number={data.number}/>
             <Carousel/>
             <Accordion items={data.popular}/>
         </div>

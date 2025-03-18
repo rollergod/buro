@@ -16,8 +16,8 @@ export const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <iframe style={{borderRadius:'10px'}}
-                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f9423f587a04ea12324063e4b917a7e6eb9c0f32c95be4663e413f377156a15&amp;source=constructor"
+                        <iframe style={{borderRadius: '10px'}}
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
                             width="380" height="200" frameBorder="0"></iframe>
                     </div>
                     <div className='footer__form'>

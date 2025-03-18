@@ -5,8 +5,10 @@
 }
 
 
-.info__row p{
+.info__row p {
     font-size: 16px;
+    max-width: 320px;
+    text-align: start;
 }
 
 .image__block {
@@ -35,7 +37,7 @@
     margin-bottom: 3px;
 }
 
-.info__row p a {
+.info__row-number {
     color: #000;
 }
 

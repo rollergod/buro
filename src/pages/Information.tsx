@@ -2,6 +2,8 @@ import '../styles/Information.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {Root} from "../types";
+import {useEffect, useState} from "react";
 
 function SampleNextArrow(props) {
     const {className, onClick} = props;
@@ -28,11 +30,25 @@ function SamplePrevArrow(props) {
 }
 
 export const Information = () => {
+
+    const [data, setData] = useState<Root>({
+        schedule: '',
+        number: ''
+    });
+
+    useEffect(() => {
+        fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
+            .then(res => res.json())
+            .then(items => {
+                setData(items);
+            });
+    }, [])
+
     const settings = {
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 500,
-        variableWidth: false,
+        variableWidth: true,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
     };
@@ -47,7 +63,7 @@ export const Information = () => {
                         самых тяжелых испытаний, и в этот сложный период особенно важно чувствовать поддержку и
                         понимание.</h5>
                     <p style={{marginBottom: '25px'}} className='information__text'>
-                        [Название компании] создано, чтобы помогать людям достойно проводить своих родных в последний
+                        Наша компания создана, чтобы помогать людям достойно проводить своих родных в последний
                         путь. Мы глубоко осознаем, насколько хрупок и ценен каждый прожитый миг, и стремимся сделать
                         процесс прощания спокойным и достойным.
                     </p>
@@ -105,28 +121,38 @@ export const Information = () => {
 
             <div className='big-map'>
                 <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f9423f587a04ea12324063e4b917a7e6eb9c0f32c95be4663e413f377156a15&amp;source=constructor"
-                    width="1920" height="700" frameBorder="0"></iframe>
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
+                    width="100%" height="700" frameBorder="0"></iframe>
                 <div className='map__item'>
                     <div className='map__item-text__block'>
                         <h2 className="map__item-header">Контакты</h2>
-                        <p>Похоронное агентство <span className="italic">“Лютики”</span></p>
-                        <p>Ходынский бульвар, 5.</p>
-                        <p>Ежедневно с 10:00 - 19:00</p>
+                        <p>Похоронное агентство <span className="italic">“Ритм”</span></p>
+                        <p>Гагарина, 42.</p>
+                        <p>{data.schedule}</p>
                         <p>mail.email@yandex.ru</p>
-                        <p>+7(999)999-99-99</p>
+                        <p><a style={{color: '#000'}} href='tel:79532665775'>{data.number}</a></p>
                     </div>
                     <div className='image__block'>
-                        <div style={{width: '70px', height: '70px'}} className='circle'><img
-                            style={{width: '40px', height: '40px'}} src={require('../images/app.png')} alt='#'/></div>
-                        <div style={{width: '70px', height: '70px'}} className='circle'><img
-                            style={{width: '40px', height: '40px'}} src={require('../images/telephone.png')} alt='#'/>
+                        <div style={{width: '70px', height: '70px'}} className='circle'>
+                            <a target='_blank' href='https://t.me/+79532665775'>
+                                <img
+                                    style={{width: '40px', height: '40px'}} src={require('../images/app.png')} alt='#'/>
+                            </a>
                         </div>
-                        <div style={{width: '70px', height: '70px'}} className='circle'><img
-                            style={{width: '40px', height: '40px'}} src={require('../images/social.png')} alt='#'/>
+                        <div style={{width: '70px', height: '70px'}} className='circle'>
+                            <a href='tel:79532665775'>
+                                <img style={{width: '40px', height: '40px'}} src={require('../images/telephone.png')}
+                                     alt='#'/>
+                            </a>
                         </div>
-                        <div style={{width: '70px', height: '70px'}} className='circle'><img
-                            style={{width: '40px', height: '40px'}} src={require('../images/logo.png')} alt='#'/></div>
+                        <div style={{width: '70px', height: '70px'}} className='circle'>
+                            <a target='_blank'
+                               href='https://api.whatsapp.com/send/?phone=79532665775&text=Здравствуйте, я с сайта&type=phone_number&app_absent=0'>
+                                <img
+                                    style={{width: '40px', height: '40px'}} src={require('../images/telephone.png')}
+                                    alt='#'/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

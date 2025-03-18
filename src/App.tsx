@@ -9,9 +9,7 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 
 function App() {
-
     return (
-
         <div className="App">
             <Header/>
             <Routes>
@@ -21,20 +19,8 @@ function App() {
                 <Route path='/contacts' element={<Contacts isPage={true}/>}/>
                 <Route path='/information' element={<Information/>}/>
             </Routes>
-            {/*<ServicesPage />*/}
-            {/*<Information />*/}
-            {/*<Contacts isPage={true}/>*/}
             <Footer/>
         </div>
-
-        // <div className="App">
-        //     <Header/>
-        //     <ServicesPage />
-        //     {/*<Home/>*/}
-        //     {/*<Information />*/}
-        //     {/*<Contacts isPage={true}/>*/}
-        //     <Footer/>
-        // </div>
     );
 }
 

@@ -1,21 +1,11 @@
 import '../styles/ServicesPage.css'
 import {useEffect, useState} from "react";
 import {Popup} from "../components/Popup.tsx";
-
-interface Root {
-    subTitle: string;
-    items: Service[]
-}
-
-interface Service {
-    title: string;
-    text: string;
-    imageUrl: string;
-}
+import {ServiceRoot} from "../types";
 
 export const ServicesPage = () => {
 
-    const [services, setServices] = useState<Root[]>([])
+    const [services, setServices] = useState<ServiceRoot[]>([])
 
     useEffect(() => {
         fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/services.json')
