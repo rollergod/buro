@@ -5,25 +5,18 @@ import {Packets} from "../components/Packets.tsx";
 import {Contacts} from "../components/Contacts.tsx";
 import {Carousel} from "../components/Carousel.tsx";
 import {Accordion} from "../components/Accordion.tsx";
-import {Root} from "../types";
+import {useQuery} from "react-query";
+import {API} from "../API.ts";
 
 export const Home = () => {
-
-    const [data, setData] = useState<Root>({
-        services: [],
-        popular: [],
-        schedule: '',
-        number: ''
+    const { data, isLoading } = useQuery({
+        queryKey: 'data',
+        queryFn: API.getItems,
+        refetchOnWindowFocus: false,
+        staleTime: 1000 * 60 * 5,
     });
 
-    useEffect(() => {
-       fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
-           .then(res => res.json())
-           .then(items => {
-               setData(items);
-           });
-   },[])
-
+    if (isLoading) return <div>Идёт загрузка...</div>;
     return (
         <div>
             <AboutUs/>

@@ -1,28 +1,30 @@
 import '../styles/ServicesPage.css'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Popup} from "../components/Popup.tsx";
 import {ServiceRoot} from "../types";
+import {useQuery} from "react-query";
+import {API} from "../API.ts";
 
 export const ServicesPage = () => {
 
-    const [services, setServices] = useState<ServiceRoot[]>([])
-
-    useEffect(() => {
-        fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/services.json')
-            .then(res => res.json())
-            .then(items => {
-                setServices(items);
-            });
-    }, [])
-
     const [isPopupOpen, setPopupOpen] = useState(false);
+
+    const {data, isLoading} = useQuery({
+        queryKey: 'services',
+        queryFn: API.getServices,
+        refetchOnWindowFocus: false,
+        staleTime: 1000 * 60 * 5,
+    });
+
+
+    if (isLoading) return <div>Идёт загрузка...</div>;
     return (
         <div>
             <div className='container'>
                 <h2 className='services__title title'>Услуги</h2>
 
                 {
-                    services.map(item => (
+                    data.map(item => (
                         <>
                             <h3 className='servicesPage__item-section--title'>{item.subTitle}</h3>
                             <div className='servicesPage__block'>

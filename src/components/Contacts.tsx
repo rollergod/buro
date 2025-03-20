@@ -1,28 +1,54 @@
 import '../styles/Packets.css'
 import '../styles/Contacts.css'
-import React, {useEffect, useState} from 'react';
-import {Root} from "../types";
+import React, {useState} from 'react';
+import {useQuery} from "react-query";
+import {API} from "../API.ts";
+import emailjs from 'emailjs-com';
 
 export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: string }> =
     ({isPage, schedule, number}) => {
 
-        const [data, setData] = useState<Root>({
-            services: [],
-            popular: [],
-            schedule: '',
-            number: ''
+        const [formData, setFormData] = useState({
+            name: '',
+            messenger: '',
         });
 
-        useEffect(() => {
-            if (!schedule || !number) {
-                fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
-                    .then(res => res.json())
-                    .then(items => {
-                        setData(items);
-                    });
-            }
-        }, [])
+        const handleChange = (e) => {
+            setFormData(prev => ({
+                ...prev,
+                [e.target.name]: e.target.value,
+            }));
+        };
 
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+
+            emailjs.send(
+                'service_fgiwbd8',
+                'template_dgeqypr',
+                formData,
+                '40hZBLogyrpI0o7Rw'
+            ).then(
+                (result) => {
+                    console.log('Email sent:', result.text);
+                    alert('Письмо отправлено!');
+                },
+                (error) => {
+                    console.log('Ошибка:', error.text);
+                    alert('Ошибка при отправке');
+                }
+            );
+        };
+
+        const {data, isLoading} = useQuery({
+            queryKey: 'data',
+            queryFn: API.getItems,
+            refetchOnWindowFocus: false,
+            staleTime: 1000 * 60 * 5,
+        });
+
+        if (isLoading) return <div>Идёт загрузка...</div>;
         return (
             <div className='contacts'>
                 <div className='container'>
@@ -69,21 +95,31 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                         <h3 className="title">
                             Мы сами свяжемся с вами и обсудим все детали
                         </h3>
-                        <div className="form-container">
-                            <input
-                                type="text"
-                                placeholder="Как к вам обращаться?"
-                                className="input-field"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Мессенджер (Telegram или Whatsapp)"
-                                className="input-field"
-                            />
-                        </div>
-                        <button className="submit-button">
-                            Отправить
-                        </button>
+                        <form onSubmit={handleSubmit} className="form-container">
+                            <div className='empty'>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Как к вам обращаться?"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className="input-field"
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    name="messenger"
+                                    placeholder="Мессенджер (Telegram или Whatsapp)"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="input-field"
+                                    required
+                                />
+                            </div>
+                            <button type='submit' className="submit-button">
+                                Отправить
+                            </button>
+                        </form>
                     </div>
 
                     {isPage && <img style={{marginTop: '100px'}} src={require('../images/fullMap.png')} alt='#'/>}

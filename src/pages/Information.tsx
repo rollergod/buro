@@ -2,8 +2,8 @@ import '../styles/Information.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Root} from "../types";
-import {useEffect, useState} from "react";
+import {useQuery} from "react-query";
+import {API} from "../API.ts";
 
 function SampleNextArrow(props) {
     const {className, onClick} = props;
@@ -31,18 +31,13 @@ function SamplePrevArrow(props) {
 
 export const Information = () => {
 
-    const [data, setData] = useState<Root>({
-        schedule: '',
-        number: ''
+    const { data, isLoading } = useQuery({
+        queryKey: 'data',
+        queryFn: API.getItems,
+        keepPreviousData: true,
+        refetchOnWindowFocus: false,
+        staleTime: 1000 * 60 * 5,
     });
-
-    useEffect(() => {
-        fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
-            .then(res => res.json())
-            .then(items => {
-                setData(items);
-            });
-    }, [])
 
     const settings = {
         slidesToShow: 2,
@@ -53,6 +48,7 @@ export const Information = () => {
         prevArrow: <SamplePrevArrow/>,
     };
 
+    if (isLoading) return <div>Идёт загрузка...</div>;
     return (
         <div>
             <div className='container'>
