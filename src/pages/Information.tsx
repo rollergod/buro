@@ -66,18 +66,13 @@ export const Information = () => {
 
                     <div className="slider-container">
                         <Slider {...settings}>
-                            <div style={{marginRight: '50px'}}>
-                                <img src={require('../images/grob.png')} alt='#'/>
-                            </div>
-                            <div>
-                                <img src={require('../images/grob.png')} alt='#'/>
-                            </div>
-                            <div>
-                                <img src={require('../images/grob.png')} alt='#'/>
-                            </div>
-                            <div>
-                                <img src={require('../images/grob.png')} alt='#'/>
-                            </div>
+                            {
+                                data.aboutUsImages.map((image, i) => (
+                                    <div key={i}>
+                                        <img style={{height: '500px'}} src={image} alt='#'/>
+                                    </div>
+                                ))
+                            }
                         </Slider>
                     </div>
 

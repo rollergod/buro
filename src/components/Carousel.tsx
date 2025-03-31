@@ -20,7 +20,7 @@ function SamplePrevArrow(props) {
                  border: '2px solid #000',
                  position: 'absolute',
                  top: '40%',
-                 left: '30%',
+                 left: '35%',
                  zIndex: '1', cursor: 'pointer'
              }}>
             <img src={require('../images/left.png')} alt='#'/>
@@ -42,14 +42,14 @@ function SampleNextArrow(props) {
                  borderRadius: '50%',
                  border: '2px solid #000',
                  position: 'absolute',
-                 top: '40%', right: '29%', cursor: 'pointer'
+                 top: '40%', right: '35%', cursor: 'pointer'
              }}>
             <img src={require('../images/right.png')} alt='#'/>
         </div>
     );
 }
 
-export const Carousel = () => {
+export const Carousel: React.FC<{ images: string[] }> = ({images}) => {
     const settings = {
         variableWidth: true,
         className: "center",
@@ -66,18 +66,13 @@ export const Carousel = () => {
     return (
         <div>
             <Slider style={{marginTop: '100px'}} {...settings}>
-                <div>
-                    <img src={require('../images/car.jpg')} alt='#'/>
-                </div>
-                <div>
-                    <img src={require('../images/car.jpg')} alt='#'/>
-                </div>
-                <div>
-                    <img src={require('../images/car.jpg')} alt='#'/>
-                </div>
-                <div>
-                    <img src={require('../images/car.jpg')} alt='#'/>
-                </div>
+                {
+                    images.map((image, i) => (
+                        <div key={i}>
+                            <img style={{height: '500px'}} src={image} alt='#'/>
+                        </div>
+                    ))
+                }
             </Slider>
         </div>
     );

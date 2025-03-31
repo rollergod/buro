@@ -7,7 +7,6 @@ export const AboutUs = () => {
             <div className='container'>
                 <h2 className='title'>О нас</h2>
                 <div className='about-us__info'>
-                    {/*<img className='about-us__image' alt='#' src='../logo.svg'/>*/}
                     <div className='about-us__image'></div>
                     <div>
                         <div className='about-us__text'>

@@ -9,11 +9,11 @@ import {useQuery} from "react-query";
 import {API} from "../API.ts";
 
 export const Home = () => {
-    const { data, isLoading } = useQuery({
+    const {data, isLoading} = useQuery({
         queryKey: 'data',
         queryFn: API.getItems,
         refetchOnWindowFocus: false,
-        staleTime: 1000 * 60 * 5,
+        staleTime: 0,
     });
 
     if (isLoading) return <div>Идёт загрузка...</div>;
@@ -23,7 +23,7 @@ export const Home = () => {
             <Services services={data.services}/>
             <Packets/>
             <Contacts schedule={data.schedule} number={data.number}/>
-            <Carousel/>
+            <Carousel images={data.carouselImages}/>
             <Accordion items={data.popular}/>
         </div>
     )

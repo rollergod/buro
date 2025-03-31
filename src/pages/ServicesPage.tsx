@@ -16,7 +16,6 @@ export const ServicesPage = () => {
         staleTime: 1000 * 60 * 5,
     });
 
-
     if (isLoading) return <div>Идёт загрузка...</div>;
     return (
         <div>
