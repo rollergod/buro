@@ -1,28 +1,23 @@
 {
   "files": {
-    "main.css": "/buro/static/css/main.abf0ed5c.css",
-    "main.js": "/buro/static/js/main.dde0d2f6.js",
+    "main.css": "/buro/static/css/main.cc0a9cd5.css",
+    "main.js": "/buro/static/js/main.57d03462.js",
     "static/media/backbround.jpg": "/buro/static/media/backbround.5e929135f534c9c8838a.jpg",
     "static/media/test.png": "/buro/static/media/test.e045322e7e36c7071bae.png",
     "static/media/fullMap.png": "/buro/static/media/fullMap.fabaa92776f4ae1eec3b.png",
-    "static/media/car.jpg": "/buro/static/media/car.758fd4540823f947b189.jpg",
-    "static/media/grob.png": "/buro/static/media/grob.951da20f4a43661d96ba.png",
     "static/media/popupAngel.jpg": "/buro/static/media/popupAngel.280032f7919899996e04.jpg",
     "static/media/wreath.png": "/buro/static/media/wreath.c11109f92716539151c5.png",
-    "static/media/video.png": "/buro/static/media/video.8cb5daea96d3a8851b44.png",
-    "static/media/social.png": "/buro/static/media/social.7e65d2b1d99e72bd71f3.png",
-    "static/media/logo.png": "/buro/static/media/logo.821b9bf88ce93e82d637.png",
     "static/media/telephone.png": "/buro/static/media/telephone.86896bfa027c9dd2ad9b.png",
     "static/media/slick.svg": "/buro/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/buro/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/buro/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/buro/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/buro/index.html",
-    "main.abf0ed5c.css.map": "/buro/static/css/main.abf0ed5c.css.map",
-    "main.dde0d2f6.js.map": "/buro/static/js/main.dde0d2f6.js.map"
+    "main.cc0a9cd5.css.map": "/buro/static/css/main.cc0a9cd5.css.map",
+    "main.57d03462.js.map": "/buro/static/js/main.57d03462.js.map"
   },
   "entrypoints": [
-    "static/css/main.abf0ed5c.css",
-    "static/js/main.dde0d2f6.js"
+    "static/css/main.cc0a9cd5.css",
+    "static/js/main.57d03462.js"
   ]
 }
