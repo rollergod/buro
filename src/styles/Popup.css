@@ -42,5 +42,11 @@
 }
 
 .popup__form input {
+    margin-bottom: 10px;
+}
+
+.popup__header{
+    font-weight: normal;
     margin-bottom: 15px;
+    font-size: 22px;
 }

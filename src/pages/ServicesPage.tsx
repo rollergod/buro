@@ -2,6 +2,7 @@ import '../styles/ServicesPage.css'
 import {useState} from "react";
 import {useQuery} from "react-query";
 import {API} from "../API.ts";
+import {Popup} from "../components/Popup.tsx";
 
 export const ServicesPage = () => {
 

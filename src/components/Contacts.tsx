@@ -126,8 +126,6 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                             </button>
                         </form>
                     </div>
-
-                    {isPage && <img style={{marginTop: '100px'}} src={require('../images/fullMap.png')} alt='#'/>}
                 </div>
             </div>
         )
