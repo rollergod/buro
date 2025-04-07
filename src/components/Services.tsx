@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Services.css'
 import {Popular, Service} from "../pages/Home";
+import {Link} from "react-router-dom";
 
 export const Services: React.FC<Service[]> = ({services}) => {
     return (
@@ -18,7 +19,7 @@ export const Services: React.FC<Service[]> = ({services}) => {
                             ))
                         }
                     </div>
-                    <a href="#" className="link-button">Подробнее</a>
+                    <Link to="/services#services" className="link-button">Подробнее</Link>
                 </div>
             </div>
         </>

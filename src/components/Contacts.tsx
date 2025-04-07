@@ -8,6 +8,7 @@ import emailjs from 'emailjs-com';
 export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: string }> =
     ({isPage, schedule, number}) => {
 
+        const [loading, setLoading] = useState(false);
         const [formData, setFormData] = useState({
             name: '',
             messenger: '',
@@ -20,10 +21,9 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
             }));
         };
 
-
         const handleSubmit = (e) => {
             e.preventDefault();
-
+            setLoading(true);
             emailjs.send(
                 'service_fgiwbd8',
                 'template_dgeqypr',
@@ -33,6 +33,7 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                 (result) => {
                     console.log('Email sent:', result.text);
                     alert('Письмо отправлено!');
+                    setLoading(false);
                 },
                 (error) => {
                     console.log('Ошибка:', error.text);
@@ -53,7 +54,7 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
             <div className='contacts'>
                 <div className='container'>
                     <h2 className='title'>Контакты</h2>
-                    <div className='contacts__block'>
+                    <div id='contacts' className='contacts__block'>
                         <div className='text__block'>
                             <h5 className='block__title'>Свяжитесь с нами любым удобным для вас способом:</h5>
                             <div className='info__block'>
@@ -116,7 +117,11 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                                     required
                                 />
                             </div>
-                            <button type='submit' className="submit-button">
+                            <button disabled={loading} type='submit'
+                                    className={`submit-button ${loading ? 'loading' : ''}`}>
+                                {loading &&
+                                    <span className="spinner"></span>
+                                }
                                 Отправить
                             </button>
                         </form>

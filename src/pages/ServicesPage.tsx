@@ -1,7 +1,5 @@
 import '../styles/ServicesPage.css'
 import {useState} from "react";
-import {Popup} from "../components/Popup.tsx";
-import {ServiceRoot} from "../types";
 import {useQuery} from "react-query";
 import {API} from "../API.ts";
 
@@ -18,10 +16,9 @@ export const ServicesPage = () => {
 
     if (isLoading) return <div>Идёт загрузка...</div>;
     return (
-        <div>
+        <div id='services'>
             <div className='container'>
                 <h2 className='services__title title'>Услуги</h2>
-
                 {
                     data.map(item => (
                         <>

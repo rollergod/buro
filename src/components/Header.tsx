@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/Header.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {Root} from "../types";
 
 export const Header = () => {
@@ -9,6 +9,17 @@ export const Header = () => {
         schedule: '',
         number: ''
     });
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/information#info');
+        setTimeout(() => {
+            const element = document.getElementById('info');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    };
 
     useEffect(() => {
         fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
@@ -47,10 +58,10 @@ export const Header = () => {
                     <div className="welcome">
                         <h1 className="welcome__header">Помогаем достойно проводить близких в последний путь</h1>
                         <h3 className="welcome__text">Мы ценим жизнь, ценим людей, которые были с нами.</h3>
-                        <a href="#" className="link-button white">Консультация</a>
+                        <a href='#' onClick={handleClick} className="link-button white">Консультация</a>
                     </div>
                 </div>
             </main>
         </>
-    )
+    );
 }

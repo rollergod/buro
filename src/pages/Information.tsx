@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
 
 export const Information = () => {
 
-    const { data, isLoading } = useQuery({
+    const {data, isLoading} = useQuery({
         queryKey: 'data',
         queryFn: API.getItems,
         keepPreviousData: true,
@@ -110,7 +110,7 @@ export const Information = () => {
                 </p>
             </div>
 
-            <div className='big-map'>
+            <div id='info' className='big-map'>
                 <iframe
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
                     width="100%" height="700" frameBorder="0"></iframe>

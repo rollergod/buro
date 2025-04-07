@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import '../styles/Accordion.css';
-import {Popular} from "../pages/Home";
+import {Popular} from "../types";
 
 export const Accordion: React.FC<Popular[]> = ({items}) => {
     const [openIndexes, setOpenedIndex] = useState([]);

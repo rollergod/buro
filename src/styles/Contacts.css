@@ -64,6 +64,11 @@
     background-color: #b5830a;
 }
 
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
 .back__form {
     margin-top: 20px;
 }

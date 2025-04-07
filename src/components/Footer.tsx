@@ -1,8 +1,11 @@
 import '../styles/Footer.css';
 import {useState} from "react";
 import emailjs from "emailjs-com";
+import {Link} from "react-router-dom";
 
 export const Footer = () => {
+
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         messenger: '',
@@ -17,7 +20,7 @@ export const Footer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setLoading(true);
         emailjs.send(
             'service_fgiwbd8',
             'template_dgeqypr',
@@ -27,6 +30,7 @@ export const Footer = () => {
             (result) => {
                 console.log('Email sent:', result.text);
                 alert('Письмо отправлено!');
+                setLoading(false);
             },
             (error) => {
                 console.log('Ошибка:', error.text);
@@ -41,18 +45,17 @@ export const Footer = () => {
                 <div className='footer__section'>
                     <div className='footer__menu'>
                         <ul>
-                            <li><a className='link' href='#'>Главная</a></li>
-                            <li><a className='link' href='#'>Услуги</a></li>
-                            <li><a className='link' href='#'>Пакеты</a></li>
-                            <li><a className='link' href='#'>Отзывы</a></li>
-                            <li><a className='link' href='#'>Контакты</a></li>
-                            <li><a className='link' href='#'>О нас</a></li>
+                            <li><Link to='/#' className='link'>Главная</Link></li>
+                            <li><Link className='link' to='/services'>Услуги</Link></li>
+                            <li><Link className='link' to='/services'>Пакеты</Link></li>
+                            <li><Link className='link' to='/contacts'>Контакты</Link></li>
+                            <li><Link className='link' to='/information'>О нас</Link></li>
                         </ul>
                     </div>
                     <div>
                         <iframe style={{borderRadius: '10px'}}
-                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
-                            width="380" height="200" frameBorder="0"></iframe>
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
+                                width="380" height="200" frameBorder="0"></iframe>
                     </div>
                     <form onSubmit={handleSubmit} className='footer__form'>
                         <input
@@ -73,7 +76,11 @@ export const Footer = () => {
                             className="input-field"
                             required
                         />
-                        <button type='submit' className="submit-button">
+                        <button disabled={loading} type='submit'
+                                className={`submit-button ${loading ? 'loading' : ''}`}>
+                            {loading &&
+                                <span className="spinner"></span>
+                            }
                             Отправить
                         </button>
                     </form>

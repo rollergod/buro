@@ -87,6 +87,7 @@ ul {
 }
 
 .submit-button {
+    position: relative;
     width: 320px;
     padding: 12px;
     background-color: #D4AF37;
@@ -97,6 +98,11 @@ ul {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc !important;
+    cursor: not-allowed;
 }
 
 .circle img {
@@ -121,4 +127,31 @@ ul {
 
 .input-field::placeholder {
     color: #bbb;
+}
+
+html {
+    scroll-behavior: smooth; /* Включает плавную прокрутку */
+}
+
+#services {
+    scroll-behavior: smooth;
+}
+
+.spinner {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }

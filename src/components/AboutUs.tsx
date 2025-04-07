@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/AboutUs.css';
+import {Link} from "react-router-dom";
 
 export const AboutUs = () => {
     return (
@@ -23,10 +24,10 @@ export const AboutUs = () => {
                                 сложностями по всей территории Краснодарского края
                             </p>
                         </div>
-                        <a href="#" className="link-button">Подробнее</a>
+                        <Link to='/services#services' className="link-button">Подробнее</Link>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
