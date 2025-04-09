@@ -111,7 +111,7 @@ export const Information = () => {
             </div>
 
             <div id='info' className='big-map'>
-                <iframe
+                <iframe className='map'
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A70c37a2cb89263b3fedd754de25315ba8e8ebd5365619faed41f31292c44a4c1&amp;source=constructor"
                     width="100%" height="700" frameBorder="0"></iframe>
                 <div className='map__item'>

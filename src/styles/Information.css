@@ -71,6 +71,11 @@
 .big-map {
     margin-top: 120px;
     position: relative;
+    padding: 0 50px;
+}
+
+.map {
+    border-radius:10px;
 }
 
 .map__item {

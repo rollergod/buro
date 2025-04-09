@@ -68,9 +68,9 @@ export const Footer = () => {
                             required
                         />
                         <input
-                            type="text"
+                            type="tel"
                             name="messenger"
-                            placeholder="Мессенджер (Telegram или Whatsapp)"
+                            placeholder="Введите номер телефона (7 999 999 99 99)"
                             value={formData.message}
                             onChange={handleChange}
                             className="input-field"

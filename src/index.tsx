@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 const Wrapper = ({children}) => {
     const location = useLocation();
     useLayoutEffect(() => {
-        document.documentElement.scrollTo(0, 0);
+        document.documentElement.scrollTo(0, 1000);
     }, [location.pathname]);
     return children
 }

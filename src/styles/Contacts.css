@@ -86,3 +86,9 @@
     justify-content: space-between;
     width: 70%;
 }
+
+.whatsapp{
+    font-size: 40px;
+    color:black;
+    font-weight: normal;
+}

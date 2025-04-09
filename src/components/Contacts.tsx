@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {useQuery} from "react-query";
 import {API} from "../API.ts";
 import emailjs from 'emailjs-com';
+import InputMask from 'react-input-mask';
 
 export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: string }> =
     ({isPage, schedule, number}) => {
@@ -81,13 +82,13 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                             </div>
                             <div className='circle'>
                                 <a href='tel:+79532665775'>
-                                    <img src={require('../images/telephone.png')} alt='#'/>
+                                    <img src={require('../images/newphone2.png')} alt='#'/>
                                 </a>
                             </div>
                             <div className='circle'>
                                 <a target='_blank'
                                    href='https://api.whatsapp.com/send/?phone=79532665775&text=Здравствуйте, я с сайта&type=phone_number&app_absent=0'>
-                                    <img src={require('../images/telephone.png')} alt='#'/>
+                                    <img src={require('../images/whats.png')} alt='#'/>
                                 </a>
                             </div>
                         </div>
@@ -107,10 +108,11 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                                     className="input-field"
                                     required
                                 />
+
                                 <input
-                                    type="text"
+                                    type="tel"
                                     name="messenger"
-                                    placeholder="Мессенджер (Telegram или Whatsapp)"
+                                    placeholder="Введите номер телефона (7 999 999 99 99)"
                                     value={formData.message}
                                     onChange={handleChange}
                                     className="input-field"

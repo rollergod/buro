@@ -21,14 +21,6 @@ export const Header = () => {
         });
     };
 
-    useEffect(() => {
-        fetch('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/popular.json')
-            .then(res => res.json())
-            .then(items => {
-                setData(items);
-            });
-    },[])
-
     return (
         <>
             <header className="header">
