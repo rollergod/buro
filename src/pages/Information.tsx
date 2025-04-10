@@ -140,7 +140,7 @@ export const Information = () => {
                             <a target='_blank'
                                href='https://api.whatsapp.com/send/?phone=79532665775&text=Здравствуйте, я с сайта&type=phone_number&app_absent=0'>
                                 <img
-                                    style={{width: '40px', height: '40px'}} src={require('../images/telephone.png')}
+                                    style={{width: '40px', height: '40px'}}  src={require('../images/whats.png')}
                                     alt='#'/>
                             </a>
                         </div>
