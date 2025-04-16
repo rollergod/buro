@@ -1,7 +1,8 @@
 .servicesPage__block{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap:20px;
+    /*justify-content: space-between;*/
 }
 
 .servicesPage__item-section--title {
@@ -23,6 +24,8 @@
 }
 
 .servicesPage__item--img {
+    width: 380px;
+    height: 274px;
     border-radius: 10px 10px 0 0;
 }
 

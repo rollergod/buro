@@ -29,7 +29,7 @@ export const Header = () => {
                         <ul className="header__list">
                             <li className="header__list-item"><Link to='/' className='link'>Главная</Link></li>
                             <li className="header__list-item"><Link className='link' to='/services'>Услуги</Link></li>
-                            <li className="header__list-item"><Link className='link' to='/services'>Пакеты</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/services'>Ритуальные услуги</Link></li>
                             <li className="header__list-item"><Link className='link' to='/contacts'>Контакты</Link></li>
                             <li className="header__list-item"><Link className='link' to='/information'>О нас</Link></li>
                         </ul>
@@ -40,7 +40,7 @@ export const Header = () => {
                     <div className='header__address'>
                         <span>г. Архангельск</span>
                         <br/>
-                        <span>Гагарина, 5.</span>
+                        <span>Гагарина, 42.</span>
                     </div>
                 </div>
             </header>

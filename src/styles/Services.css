@@ -22,6 +22,7 @@
 }
 
 .service h5 {
+    width: 250px;
     font-weight: 700;
     font-size: 26px;
     font-family: 'overpass', serif;
