@@ -35,39 +35,39 @@ export const RitualPage = () => {
 
     if (isLoading) return <div>Идёт загрузка...</div>;
     return (
-        <div className="products-page">
-            <h1 className='title'>Ритуальные товары</h1>
-
-            <div className="category-filter">
-                {data.categories.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => handleCategoryChange(category)}
-                        className={selectedCategory === category ? 'active' : ''}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
-
-            <div className="servicesPage__block">
-                {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product) => (
-                    <div key={product.id} className='servicesPage__item'>
-                        <img className='servicesPage__item--img '
-                             src={product.image} alt='#'/>
-                        <div className='servicesPage__item--text'>
-                            <h4 className='servicesPage__item--title'>{product.name}</h4>
-                            <p>Цена: {product.price.toLocaleString()} ₽</p>
-                            <a onClick={() => setPopupOpen(true)}>Заказать услугу</a>
-                        </div>
-                    </div>
-                    ))
-                ) : (
-                    <p>Товары в этой категории отсутствуют</p>
-                )}
-                <Popup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)}/>
-            </div>
+        <div className="rituals-page">
+          <div className={'container'}>
+              <h1 className='title'>Ритуальные товары</h1>
+              <div className="category-filter">
+                  {data.categories.map((category) => (
+                      <button
+                          key={category}
+                          onClick={() => handleCategoryChange(category)}
+                          className={selectedCategory === category ? 'active' : ''}
+                      >
+                          {category}
+                      </button>
+                  ))}
+              </div>
+              <div className="servicesPage__block">
+                  {filteredProducts.length > 0 ? (
+                      filteredProducts.map((product) => (
+                          <div key={product.id} className='servicesPage__item'>
+                              <img className='servicesPage__item--img '
+                                   src={product.image} alt='#'/>
+                              <div className='servicesPage__item--text'>
+                                  <h4 className='servicesPage__item--title'>{product.name}</h4>
+                                  <p>Цена: {product.price.toLocaleString()} ₽</p>
+                                  <a onClick={() => setPopupOpen(true)}>Заказать услугу</a>
+                              </div>
+                          </div>
+                      ))
+                  ) : (
+                      <p className={'not-found'}>Товары в этой категории отсутствуют</p>
+                  )}
+                  <Popup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)}/>
+              </div>
+          </div>
         </div>
     );
 };
