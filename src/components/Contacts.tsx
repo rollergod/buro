@@ -69,6 +69,10 @@ export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: str
                                 </div>
                                 <div className='info__row'>
                                     <div className='dot'></div>
+                                    <p>oooritm29@mail.ru</p>
+                                </div>
+                                <div className='info__row'>
+                                    <div className='dot'></div>
                                     <p><a className='info__row-number' href='#'>{number ?? data.number}</a></p>
                                 </div>
                             </div>

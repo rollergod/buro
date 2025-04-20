@@ -61,7 +61,7 @@ export const Popup: React.FC<{ isOpen: boolean, onClose: () => {} }> = ({isOpen,
                         </button>
                     </form>
                 </div>
-
+                <p className='close-icon' onClick={onClose}>X</p>
             </div>
         </div>
     )

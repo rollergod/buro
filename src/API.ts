@@ -10,8 +10,9 @@ export const API = {
         const{data} = await axios.get('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/services.json');
         return data;
     },
-    getImages: async () => {
-        const {data} = await axios.get('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/images.json');
+    getRituals: async () => {
+        const {data} = await axios.get('https://61273df6-b061-4d48-aeb1-5efe723a1665.selstorage.ru/rituals.json');
+        console.log(data);
         return data;
     }
 }

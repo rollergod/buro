@@ -7,6 +7,7 @@ import {Information} from "./pages/Information.tsx";
 import {ServicesPage} from "./pages/ServicesPage.tsx";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
+import {RitualPage} from "./pages/RitualPage.tsx";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/buro' element={<Home/>}/>
                 <Route path='/services' element={<ServicesPage/>}/>
+                <Route path='/rituals' element={<RitualPage/>}/>
                 <Route path='/contacts' element={<Contacts isPage={true}/>}/>
                 <Route path='/information' element={<Information/>}/>
             </Routes>

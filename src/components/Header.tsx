@@ -29,7 +29,7 @@ export const Header = () => {
                         <ul className="header__list">
                             <li className="header__list-item"><Link to='/' className='link'>Главная</Link></li>
                             <li className="header__list-item"><Link className='link' to='/services'>Услуги</Link></li>
-                            <li className="header__list-item"><Link className='link' to='/services'>Ритуальные услуги</Link></li>
+                            <li className="header__list-item"><Link className='link' to='/rituals'>Ритуальные товары</Link></li>
                             <li className="header__list-item"><Link className='link' to='/contacts'>Контакты</Link></li>
                             <li className="header__list-item"><Link className='link' to='/information'>О нас</Link></li>
                         </ul>

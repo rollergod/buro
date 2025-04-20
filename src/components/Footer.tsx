@@ -47,7 +47,7 @@ export const Footer = () => {
                         <ul>
                             <li><Link to='/#' className='link'>Главная</Link></li>
                             <li><Link className='link' to='/services'>Услуги</Link></li>
-                            <li><Link className='link' to='/services'>Ритуальные услуги</Link></li>
+                            <li><Link className='link' to='/rituals'>Ритуальные товары</Link></li>
                             <li><Link className='link' to='/contacts'>Контакты</Link></li>
                             <li><Link className='link' to='/information'>О нас</Link></li>
                         </ul>
