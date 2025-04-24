@@ -120,7 +120,7 @@ export const Information = () => {
                         <p>Похоронное агентство <span className="italic">“Ритм”</span></p>
                         <p>Гагарина, 42.</p>
                         <p>{data.schedule}</p>
-                        <p>mail.email@yandex.ru</p>
+                        <p>oooritm29@mail.ru</p>
                         <p><a style={{color: '#000'}} href='tel:79532665775'>{data.number}</a></p>
                     </div>
                     <div className='image__block'>
