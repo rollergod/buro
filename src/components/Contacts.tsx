@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import {useQuery} from "react-query";
 import {API} from "../API.ts";
 import emailjs from 'emailjs-com';
-import InputMask from 'react-input-mask';
 
 export const Contacts: React.FC<{ isPage: boolean, schedule: string, number: string }> =
     ({isPage, schedule, number}) => {
