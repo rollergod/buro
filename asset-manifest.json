@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b0d89d1.css",
-    "main.js": "/static/js/main.8c8c7ff9.js",
-    "static/media/backbround.jpg": "/static/media/backbround.5e929135f534c9c8838a.jpg",
-    "static/media/test.png": "/static/media/test.e045322e7e36c7071bae.png",
-    "static/media/popupAngel.jpg": "/static/media/popupAngel.280032f7919899996e04.jpg",
-    "static/media/wreath.png": "/static/media/wreath.c11109f92716539151c5.png",
-    "static/media/whats.png": "/static/media/whats.0429ca0af2970828c720.png",
-    "static/media/newphone2.png": "/static/media/newphone2.5e7a0752e9605d46fed5.png",
-    "static/media/telephone.png": "/static/media/telephone.86896bfa027c9dd2ad9b.png",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.8b0d89d1.css.map": "/static/css/main.8b0d89d1.css.map",
-    "main.8c8c7ff9.js.map": "/static/js/main.8c8c7ff9.js.map"
+    "main.css": "/buro/static/css/main.f98047cb.css",
+    "main.js": "/buro/static/js/main.87bcad64.js",
+    "static/media/backbround.jpg": "/buro/static/media/backbround.5e929135f534c9c8838a.jpg",
+    "static/media/test.png": "/buro/static/media/test.e045322e7e36c7071bae.png",
+    "static/media/popupAngel.jpg": "/buro/static/media/popupAngel.280032f7919899996e04.jpg",
+    "static/media/wreath.png": "/buro/static/media/wreath.c11109f92716539151c5.png",
+    "static/media/whats.png": "/buro/static/media/whats.0429ca0af2970828c720.png",
+    "static/media/newphone2.png": "/buro/static/media/newphone2.5e7a0752e9605d46fed5.png",
+    "static/media/telephone.png": "/buro/static/media/telephone.86896bfa027c9dd2ad9b.png",
+    "static/media/slick.svg": "/buro/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/buro/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/buro/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/buro/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/buro/index.html",
+    "main.f98047cb.css.map": "/buro/static/css/main.f98047cb.css.map",
+    "main.87bcad64.js.map": "/buro/static/js/main.87bcad64.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b0d89d1.css",
-    "static/js/main.8c8c7ff9.js"
+    "static/css/main.f98047cb.css",
+    "static/js/main.87bcad64.js"
   ]
 }
