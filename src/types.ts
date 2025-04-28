@@ -16,8 +16,3 @@ export interface Service {
     title: string;
     imageUrl: string;
 }
-
-export interface ServiceRoot {
-    subTitle: string;
-    items: Service[]
-}

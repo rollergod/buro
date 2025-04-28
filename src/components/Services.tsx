@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Services.css'
-import {Popular, Service} from "../pages/Home";
 import {Link} from "react-router-dom";
+import {Service} from "../types";
 
 export const Services: React.FC<Service[]> = ({services}) => {
     return (
