@@ -14,7 +14,7 @@ export const Popup: React.FC<{ isOpen: boolean, onClose: () => {} }> = ({isOpen,
         e.preventDefault();
         setLoading(true);
         emailjs.send(
-            'service_fgiwbd8',
+            'service_hw47n9l',
             'template_dgeqypr',
             formData,
             '40hZBLogyrpI0o7Rw'
