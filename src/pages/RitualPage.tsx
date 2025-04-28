@@ -6,7 +6,6 @@ import {API} from "../API.ts";
 import {Popup} from "../components/Popup.tsx";
 
 interface Product {
-    id: number;
     name: string;
     category: string;
     price: number;
@@ -51,8 +50,8 @@ export const RitualPage = () => {
               </div>
               <div className="servicesPage__block">
                   {filteredProducts.length > 0 ? (
-                      filteredProducts.map((product) => (
-                          <div key={product.id} className='servicesPage__item'>
+                      filteredProducts.map((product, i) => (
+                          <div key={i} className='servicesPage__item'>
                               <img className='servicesPage__item--img '
                                    src={product.image} alt='#'/>
                               <div className='servicesPage__item--text'>
